@@ -24,6 +24,8 @@ public class EmployeeTest  {
        
     }
     @Test
+    //Verifica que un Empleado de tipo Supervisor con un sueldo de 500 dolares
+    //Con un bono de 50 y con pago distinto de  Usa reciba 492.5 dolares
      public void SupervisornotUsa(){
      EmployeeType e= EmployeeType.Supervisor;
         Employee worker = new Employee(500, "EU",50,e);
@@ -31,6 +33,8 @@ public class EmployeeTest  {
         Assert.assertEquals(worker.cs(),492.5,0.05);
      }
     @Test
+    //Verifica que un Empleado de tipo Supervisor con un sueldo de 500 dolares
+    //Con un bono de 50 y con pago de Usa reciba 517.5 dolares
      public void SupervisorUsa(){
         EmployeeType e= EmployeeType.Supervisor;
         Employee worker = new Employee(500, "USD",50,e);
