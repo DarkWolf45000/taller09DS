@@ -70,6 +70,35 @@ public class EmployeeTest  {
         double yb=emp.CalculateYearBonus();
         Assert.assertEquals(3860, yb,0.1);
     } 
+    
+    @Test
+    public void ManagerUsaCs(){
+        EmployeeType m= EmployeeType.Manager;
+        Employee manager= new Employee(1000,"USD", (float) 20,m);
+        
+        Assert.assertEquals(manager.cs(), 1014,0.1);
+        
+        
+}
+    @Test
+    public void ManagerUsaCalculateYear(){
+        EmployeeType m= EmployeeType.Manager;
+        Employee manager= new Employee(1000,"USD", (float) 20,m);
+        Assert.assertEquals(manager.CalculateYearBonus(),1386,0.1);
+    }
+    @Test
+    public void ManagerNotUsaCs(){
+        EmployeeType m= EmployeeType.Manager;
+        Employee manager = new Employee(1000,"EU", (float) 20,m);
+        Assert.assertEquals(manager.cs(), 964,0.1);
+        
+    }
+      @Test
+    public void ManagerNotUsaCalculateYear(){
+        EmployeeType m= EmployeeType.Manager;
+        Employee manager = new Employee(1000,"EU", (float) 20,m);
+        Assert.assertEquals(manager.CalculateYearBonus(),1336,0.1);
+    }
      
     @BeforeClass
     public static void setUpClass() {
