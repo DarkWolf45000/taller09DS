@@ -64,7 +64,7 @@ public class EmployeeTest  {
     public void VerificarYearBonusWorkerUSD(){
         Employee emp=new Employee(200,"USD",6,EmployeeType.Worker);
         double yb=emp.CalculateYearBonus();
-        Assert.assertEquals(3860, yb,0.1);
+        Assert.assertEquals(386, yb,0.1);
     }
     
     //Verifica que el metodo CalculateYearBonus de el resultado correcto para un empleado de tipo worker con otro currency que no sea USD
@@ -72,7 +72,7 @@ public class EmployeeTest  {
     public void VerificarYearBonusWorker(){
         Employee emp=new Employee(200,"",6,EmployeeType.Worker);
         double yb=emp.CalculateYearBonus();
-        Assert.assertEquals(3860, yb,0.1);
+        Assert.assertEquals(386, yb,0.1);
     } 
     
     @Test
